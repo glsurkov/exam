@@ -1,0 +1,45 @@
+#include<iostream>
+
+using namespace std;
+
+class Area
+{
+private:
+	int length;
+	int width;
+public:
+	Area()
+	{
+		length = 0;
+		width = 0;
+	}
+	int getLength() { return length; }
+	int getWidth() { return width; }
+	int calculateArea()
+	{
+		int S = length * width;
+		return S;
+	}
+	void printArea()
+	{
+		int S = length * width;
+		cout << "площадь = "<< S << endl;
+	}
+	void setParametr()
+	{
+		cout << "Вводим длину" << endl;
+		cin >> length;
+		cout << "Вводим ширину" << endl;
+		cin >> width;
+	}
+
+};
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	Area a;
+	a.setParametr();
+	a.calculateArea();
+	a.printArea();
+
+}
